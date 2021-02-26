@@ -1,7 +1,5 @@
 # Extend Integrations Challenge
 
-This exercise is similar to the work you may be doing as a solutions engineer here at Extend. You'll be creating a modal and then integrating it into a pretend client's website. The goal: Give both the candidate and the Extend team a chance to interact on a realistic, but limited (shooting for just two or three hours), task. We see this as a two-way evaluation for the team and the candidate to decide if it's a good fit.
-
 ## Setup
 
 1. If you haven't already, Signup for GitHub and [install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
@@ -69,11 +67,7 @@ At any time, you can also run lint via `yarn lint`, and format your code via `ya
 
 4.  Once you're happy with your modal and the integrations you've done, submit a PR in your repository with a descriptive message, and no more than a few commits (each with a clear purpose)
 
-5.  In your private repository, add `m-schrepel` as a collaborator, and send an email to `matthew@extend.com` with a link to your repository
-
-6.  Before the next interview, we will provide PR feedback, to give you a chance to improve your solution before the call
-
-7.  Feel free to ask questions via email throughout the process, as we want to simulate working with the team
+5.  Complete any additional steps provided by your hiring contact.
 
 ## Tips
 
