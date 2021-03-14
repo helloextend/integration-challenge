@@ -4,30 +4,18 @@
 var checkForm = function(e)
 {
   var form = (e.target) ? e.target : e.srcElement;
-  console.log(form.email.value  + " here");
-  if(form.name.value == "") {
-    console.log('VF TEST LOGGING');
-    alert("Please enter your Name");
-    form.name.focus();
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-    return;
-  }
-  if(form.email.value == "") {
-    alert("Please enter a valid Email address");
-    form.email.focus();
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-    return;
-  }
-  if(form.message.value == "") {
-    alert("Please enter your comment or question in the Message box");
-    form.message.focus();
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-    return;
-  }
+  console.log(form.radioSize.value  + " here");
+  console.log(form.noselection + " no selection");
 };
 
-var modal_init = function() {
+var noSelection = function(e){
+  //var form = (e.target) ? e.target : e.srcElement;
+  var form = document.getElementById('modal_feedback');
+  form.submit();
+}
 
+var modal_init = function() {
+  //Modal wrapped ensures the parent page cannot be interacted with while the modal is showing.
   var modalWrapper = document.getElementById("modal_wrapper");
   var modalWindow  = document.getElementById("modal_window");
 
@@ -50,13 +38,6 @@ var modal_init = function() {
     e.preventDefault ? e.preventDefault() : e.returnValue = false;
   };
 
-  var clickHandler = function(e) {
-    if(!e.target) e.target = e.srcElement;
-    if(e.target.tagName == "DIV") {
-      if(e.target.id != "modal_window") closeModal(e);
-    }
-  };
-
   var keyHandler = function(e) {
     if(e.keyCode == 27) closeModal(e);
   };
@@ -64,12 +45,12 @@ var modal_init = function() {
   if(document.addEventListener) {
     document.getElementById("modal_open").addEventListener("click", openModal, false);
     document.getElementById("modal_close").addEventListener("click", closeModal, false);
-    document.addEventListener("click", clickHandler, false);
+    //document.addEventListener("click", clickHandler, false);
     document.addEventListener("keydown", keyHandler, false);
   } else {
     document.getElementById("modal_open").attachEvent("onclick", openModal);
     document.getElementById("modal_close").attachEvent("onclick", closeModal);
-    document.attachEvent("onclick", clickHandler);
+    //document.attachEvent("onclick", clickHandler);
     document.attachEvent("onkeydown", keyHandler);
   }
 
@@ -77,8 +58,11 @@ var modal_init = function() {
 
 if(document.addEventListener) {
   document.getElementById("modal_feedback").addEventListener("submit", checkForm, false);
+  document.getElementById("modal_no_selection").addEventListener("click", noSelection, false);
   document.addEventListener("DOMContentLoaded", modal_init, false);
+  
 } else {
   document.getElementById("modal_feedback").attachEvent("onsubmit", checkForm);
+  document.getElementById("modal_no_selection").attachEvent("click", noSelection, false);
   window.attachEvent("onload", modal_init);
 }
