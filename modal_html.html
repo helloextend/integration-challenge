@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>modal Example</title>
+  <link rel="stylesheet" type="text/css" href="modal_css.css">
+</head>
+
+<body>
+
+
+<p><button id="modal_open">Open Email Form</button></p>
+
+<div id="modal_wrapper">
+<div id="modal_window">
+
+<div style="text-align: right;"><a id="modal_close" href="#">close <b>X</b></a></div>
+
+<p id ="hello">Hello there. We can better sculpt our offerings to your business by leveraging the side of your business.</p>
+<p id ="business_type"> What type of business are you? </p>
+
+<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
+<div class="radio-toolbar">
+    <input type="radio" id="radioSmall" name="radioSize" value="small" checked>
+    <label for="radioSmall"><b class="smallBus"> Small Business </b> <br> <200 Employees</label>
+
+    <input type="radio" id="radioMedium" name="radioSize" value="medium">
+    <label  for="radioMedium"> <b class = "mediumBus"> Medium Business </b> <br> <1000 Employees</label>
+
+    <input type="radio" id="radioLarge" name="radioSize" value="large">
+    <label  for="radioLarge"> <b class = "largeBus"> Large Business </b> <br> 1000+ Employees</label> 
+</div>
+
+<p style = "text-align: center;"><input class ="submit" type="submit" name="feedbackForm" value="Continue"></p>
+<div class = "no-selection"><a id="modal_no_selection" href="#">I do not want to specify my business size.</a></div>
+</form>
+
+</div> <!-- #modal_window -->
+</div> <!-- #modal_wrapper -->
+<script type="text/javascript" src="modal_javascript.js"></script>
+</body>
+</html>
