@@ -9,7 +9,6 @@ var checkForm = function(e)
 };
 
 var noSelection = function(e){
-  //var form = (e.target) ? e.target : e.srcElement;
   var form = document.getElementById('modal_feedback');
   form.submit();
 }
@@ -32,25 +31,15 @@ var modal_init = function() {
     e.preventDefault ? e.preventDefault() : e.returnValue = false;
   };
 
-  var closeModal = function(e)
-  {
-    modalWrapper.className = "";
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-  };
-
   var keyHandler = function(e) {
     if(e.keyCode == 27) closeModal(e);
   };
 
   if(document.addEventListener) {
     document.getElementById("modal_open").addEventListener("click", openModal, false);
-    document.getElementById("modal_close").addEventListener("click", closeModal, false);
-    //document.addEventListener("click", clickHandler, false);
     document.addEventListener("keydown", keyHandler, false);
   } else {
     document.getElementById("modal_open").attachEvent("onclick", openModal);
-    document.getElementById("modal_close").attachEvent("onclick", closeModal);
-    //document.attachEvent("onclick", clickHandler);
     document.attachEvent("onkeydown", keyHandler);
   }
 

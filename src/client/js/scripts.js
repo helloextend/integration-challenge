@@ -27,7 +27,10 @@
     var name = $('#name').val()
     var email = $('#email').val()
     var phone = $('#phone').val()
-    var businessName = $('#business').val()
+    var businessName = $('#business').val();
+    console.log('VF TEST');
+    //VFALK this function is called when clicking "Send Inquiry"
+    openModal();
     subForm('success1', name, email, phone, businessName)
   }
 
@@ -38,6 +41,25 @@
     },
     true,
   )
+
+  //VFALK adding event listener to Send Inquiry Button
+  if(document.addEventListener) {
+    document.getElementById("sendinquiry").addEventListener("click", openModal, false);
+  } else {
+    document.getElementById("sendinquiry").attachEvent("onclick", openModal);
+  }
+  var openModal = function(e)
+  {
+    console.log('TEST')
+    modalWrapper.className = "overlay";
+    var overflow = modalWindow.offsetHeight - document.documentElement.clientHeight;
+    if(overflow > 0) {
+      modalWindow.style.maxHeight = (parseInt(window.getComputedStyle(modalWindow).height) - overflow) + "px";
+    }
+    modalWindow.style.marginTop = (-modalWindow.offsetHeight)/2 + "px";
+    modalWindow.style.marginLeft = (-modalWindow.offsetWidth)/2 + "px";
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+  };
 
   window.s = s
 })(jQuery)
