@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-
- <!-- Can remove this when integrated with client website
-<p><button id="modal_open">Open Email Form</button></p>
-
-<div id="modal_wrapper">
-<div id="modal_window">
--->
 <link rel="stylesheet" type="text/css" href="modal_css.css">
 <p id ="hello">Hello there. We can better sculpt our offerings to your business by leveraging the size of your business.</p>
 <p id ="business_type"> What type of business are you? </p>
 
-<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8" target='_parent'>
+<form id="modal_feedback" onsubmit="submitForm()" accept-charset="UTF-8" >
 <div class="radio-toolbar">
     <input type="radio" id="radioSmall" name="radioSize" value="small" checked>
     <label for="radioSmall"><b class="smallBus"> Small Business </b> <br> <200 Employees</label>
@@ -28,8 +21,5 @@
 <div class = "no-selection"><a  name = "noselection" id="modal_no_selection" href="#">I do not want to specify my business size.</a></div>
 </form>
 <script type="text/javascript" src="modal_javascript.js"></script>
-<script> console.log("Successfully linked modal");</script>
-
-
 </body>
 </html>
