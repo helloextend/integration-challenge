@@ -71,7 +71,7 @@
 .text-solutions {
   color: #c0c0c0;
 }
-/* Moved from modal_css to handle */
+/* Moved from modal_css to handle launching from client website */
 #modal_wrapper.overlay::before {
   content: " ";
   width: 100%;
