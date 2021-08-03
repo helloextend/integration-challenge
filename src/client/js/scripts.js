@@ -22,6 +22,7 @@
     $('#sidebar').hide()
   })
 
+
   function s(event) {
     event.preventDefault()
     var name = $('#name').val()
@@ -32,9 +33,10 @@
   }
 
   document.querySelector('#sidebar-form').addEventListener(
-    'submit',
-    function () {
+    'submit',function () {
       subForm('success2', null, document.querySelector('#e2').value, null, 'have a good day')
+      $('#sidebar-overlay').hide(100)
+      $('#sidebar').hide(2000)
     },
     true,
   )
