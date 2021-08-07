@@ -122,7 +122,7 @@
           </div>
           <div class="text-center">
             <div id="success1"></div>
-            <button class="btn btn-primary btn-xl text-uppercase" type="submit">
+            <button id ="btnSend"class="btn btn-primary btn-xl text-uppercase" type="submit">
               Send inquiry
             </button>
           </div>
@@ -158,7 +158,7 @@
           <form id="sidebar-form">
             <div class="form-group">
               <input class="form-control" id="e2" type="email" placeholder="Your Email" />
-              <button class="btn btn-primary btn-xl text-uppercase">
+              <button id="btnGet" class="btn btn-primary btn-xl text-uppercase"onsubmit="return s(event)">
                 Get in contact
               </button>
               <div id="success2"></div>
@@ -168,7 +168,30 @@
       </div>
     </section>
 
+    <div id ="background" class ="background"></div>
+    <div id = "modal" class ="modal">
+          <h2>Hello there. We can better sculpt our offerings to your business by levergaging the size of your business.</h2>
+          <h3>What type of business are you?</h3>
+          <button id ="smallBusiness">
+              <p>Small Business</p>
+              <p class ="smText"> 	&lt 200 Employees </p>
+          </button>
+          <button id ="mediumBusiness">
+            <p>Medium Business</p>
+            <p class ="smText"> 	&lt 1000 Employees </p>
+        </button>
+        <button id ="largeBusiness">
+            <p>Large Business</p>
+            <p class ="smText"> 	1000+ Employees </p>
+        </button>
+      <button id ="continue" class="btnContinue">Continue</button>
+        <button id ="btnBusSize"class="btnBusSize" >
+      <p>I dont want to specify my business size</p>
+        </button>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script  src="js/modal.js"></script> 
   </body>
 </html>

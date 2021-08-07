@@ -71,3 +71,96 @@
 .text-solutions {
   color: #c0c0c0;
 }
+
+
+
+
+.modal {
+    
+    text-align: center;
+    background-color: white;
+    max-width: 500px;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms;
+    z-index: 10;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.show-modal .modal {
+    display: block;
+  }
+  
+  .show-modal .background {
+    display: block;
+  }
+
+  .show-modal-only .modal{
+    display: block;
+  }
+
+
+.background{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 200ms;
+}
+
+#smallBusiness{
+    color: green;
+    font-size: medium;
+    border:none;
+
+}
+
+
+#mediumBusiness{
+    color: red;
+    font-size: medium;
+    border:none;
+}
+
+
+#largeBusiness {
+    color: blue;
+    font-size: medium;
+    border:none;
+}
+
+
+.btnContinue{
+  width: 40%;
+  background-color: #4CAF50;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border:none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.smText {
+    color: gray;
+    font-size: smaller;
+}
+
+.btnBusSize{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+  display: block;
+  margin-left: 120px;
+}
